@@ -15,9 +15,6 @@ var show = template.Must(template.New("show").Parse(`<!DOCTYPE html>
 		</style>
 	</head>
 	<body>
-		<form action="{{.Path}}" method="GET">
-    	<button type="submit">Edit</button>
-		</form>
 		<article>{{.Text}}</article>
 	</body>
 </html>`))
@@ -44,35 +41,6 @@ const stylesheet = `
 		body {
 			padding: 3rem 5rem;
 		}
-
-		button {
-			position: fixed;
-			bottom: 0px;
-			right: 0px;
-		}
-	}
-
-	button {
-		margin: 1rem;
-		background: #fafafa;
-	  background-image: linear-gradient(to bottom, #fafafa, #dedede);
-	  border-radius: 6px;
-	  font-family: Helvetica;
-	  color: #595959;
-	  font-size: 14px;
-	  padding: 6px 12px 6px 12px;
-	  border: solid #b8b8b8 1px;
-		cursor: pointer;
-	}
-	
-	button:active {
-		background: #f7f7f7;
-	  background-image: linear-gradient(to bottom, #f7f7f7, #c4c2c4);
-	  text-decoration: none;
-	}
-
-	button:focus, textarea:focus {
-		outline:0;
 	}
 
 	h1 { font-size: 3.5em; } 
