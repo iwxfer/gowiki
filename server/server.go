@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/peterhellberg/wiki/db"
+	"github.com/iwxfer/gowiki/db"
 	"github.com/russross/blackfriday"
 )
 

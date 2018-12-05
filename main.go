@@ -27,8 +27,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/peterhellberg/wiki/db"
-	"github.com/peterhellberg/wiki/server"
+	"github.com/iwxfer/gowiki/db"
+	"github.com/iwxfer/gowiki/server"
 )
 
 var dbFile string
