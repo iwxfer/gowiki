@@ -22,35 +22,6 @@ var show = template.Must(template.New("show").Parse(`<!DOCTYPE html>
 	</body>
 </html>`))
 
-var edit = template.Must(template.New("edit").Parse(`<!DOCTYPE html>
-<html>
-	<head>
-		<title>{{.Title}}</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-		` + stylesheet + `
-		</style>
-		<script>
-			window.onload = function () {
-				var contenteditableDiv = document.getElementById("textdiv");
-				
-				contenteditableDiv.addEventListener("input", function(){ 
-      	 document.getElementById("text").value = contenteditableDiv.innerText;
-      	});
-
-				contenteditableDiv.focus();
-			};
-		</script>
-	</head>
-	<body>
-		<form action="{{.Path}}" method="POST">
-			<button type="submit">Save</button><br />
-			<div id="textdiv" contentEditable autofocus>{{.Text}}</div>
-			<textarea id="text" name="text">{{.Text}}</textarea>
-		</form>
-	</body>
-</html>`))
-
 const stylesheet = `
 	a {
 		color: #0366d6;

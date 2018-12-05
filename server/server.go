@@ -39,14 +39,10 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	s.logger.Println(r.Method, r.URL.String())
 
 	switch {
-	case r.Method == http.MethodPost:
-		s.save(w, r)
 	case r.URL.Path == "/favicon.ico":
 		s.favicon(w, r)
 	case r.URL.Path == "/home":
 		s.redirect(w, r)
-	case strings.HasSuffix(r.URL.Path, "/edit"):
-		s.edit(w, r)
 	case strings.HasSuffix(r.URL.Path, "/") && len(r.URL.Path) > 1:
 		s.redirect(w, r)
 	default:
