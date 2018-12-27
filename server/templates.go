@@ -20,7 +20,7 @@ var show = template.Must(template.New("show").Parse(`<!DOCTYPE html>
 </html>`))
 
 const stylesheet = `
-html { font-size: 100%%; overflow-y: scroll; -webkit-text-size-adjust: 100%%; -ms-text-size-adjust: 100%; }
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 body{
 color:#444;
@@ -51,7 +51,7 @@ margin:1em 0;
 }
 
 img{
-max-width:100%%;
+max-width:100%;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -74,8 +74,6 @@ padding-left: 3em;
 border-left: 0.5em #EEE solid;
 }
 hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
-pre, code, kbd, samp { color: #000; font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 0.98em; }
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 
 b, strong { font-weight: bold; }
 
@@ -85,7 +83,7 @@ ins { background: #ff9; color: #000; text-decoration: none; }
 
 mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
 
-sub, sup { font-size: 75%%; line-height: 0; position: relative; vertical-align: baseline; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
@@ -95,7 +93,7 @@ dd { margin: 0 0 0 2em; }
 
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
-table { border-collapse: collapse; border-spacing: 0; }
+table { border-collapse: collapse; border-spacing: 0; width: 100%; }
 td { vertical-align: top; }
 
 @media only screen and (min-width: 480px) {
@@ -122,4 +120,71 @@ body{font-size:16px;}
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+	@media only screen and (min-device-width: 960px) {
+		button {
+			position: fixed;
+			bottom: 0px;
+			right: 0px;
+		}
+	}
+
+	button {
+		margin: 1rem;
+		background: #fafafa;
+	  background-image: linear-gradient(to bottom, #fafafa, #dedede);
+	  border-radius: 6px;
+	  font-family: Helvetica;
+	  color: #595959;
+	  font-size: 14px;
+	  padding: 6px 12px 6px 12px;
+	  border: solid #b8b8b8 1px;
+		cursor: pointer;
+	}
+
+	button:active {
+		background: #f7f7f7;
+	  background-image: linear-gradient(to bottom, #f7f7f7, #c4c2c4);
+	  text-decoration: none;
+	}
+
+	button:focus, textarea:focus {
+		outline:0;
+	}
+
+	pre {
+		font-size: 0.9em;
+		border: 1px solid #dddfe1;
+		border-radius: 3px;
+		background: #f6f8fa;
+		padding: 1rem;
+		overflow: auto;
+	}
+
+	code {
+		font-family: monaco,Consolas,Lucida Console,monospace;
+	}
+
+	textarea {
+		display: none;
+	}
+
+	article {
+		padding: 0 1rem;
+	}
+
+	#textdiv {
+		background: #F6F8FA;
+		border: 1px solid #dddfe1;
+		border-radius: 6px;
+		padding: 0.5rem;
+		min-height: 1em;
+		overflow: auto;
+		white-space: pre;
+		font-size: 0.8rem;
+		font-family: monaco,Consolas,Lucida Console,monospace;
+	}
+
+	#textdiv:focus {
+		outline: none;
+	}
 `
